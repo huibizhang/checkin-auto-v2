@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"icons": {
+		"128": "images/icon-128.png"
+	},
+	"description": "出勤考核表 - Auto Fill v2",
+	"permissions": [
+		"storage"
+  ],
+	"name": "出勤考核表自動填v2",
+	"version": "2.0.1",
+	"homepage_url": "https://csie.ncut.edu.tw",
+	"content_scripts" : [{  
+		"matches" : ["https://assistant.ncut.edu.tw/student/*"],  
+		"js" : ["jquery.min.js","holidays.js","background.js"]  
+	}],
+	"browser_action": {  
+		"default_title": "出勤考核表自動填 v2",  
+		"default_icon": {
+				"16": "images/icon.png",
+				"24": "images/icon.png",
+				"32": "images/icon.png"
+		},  
+		"default_popup": "popup.html"
+	}  
+}

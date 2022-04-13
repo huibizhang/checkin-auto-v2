@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <script src="https://cdn-tailwindcss.vercel.app/"></script> -->
+</head>
+<body class="w-64">
+    <div class="flex flex-col">
+        <div class="text-lg font-bold p-3 text-center">出勤考核資料確認</div>
+        <div class="flex flex-col px-6 pb-3 space-y-3">
+            <div class="flex flex-none gap-2">
+                <div class="flex-none font-bold">開始聘任</div>
+                <div class="flex-1 text-center" id="start"></div>
+            </div>
+            <div class="flex flex-none gap-2">
+                <div class="flex-none font-bold">結束聘任</div>
+                <div class="flex-1 text-center" id="end"></div>
+            </div>
+            <div class="flex flex-none gap-2">
+                <div class="flex-none font-bold">總時數</div>
+                <div class="flex-1 text-center" id="total"></div>
+            </div>
+            <div class="flex flex-none gap-2 flex-col">
+                <div class="flex-none font-bold">工作內容</div>
+                <div class="flex-1 text-center">
+                    <textarea class="w-full border rounded-md p-1" id="content"></textarea>
+                </div>
+            </div>
+        </div>
+        <button
+            id="startBtn"
+            class="mx-auto m-3 inset-0 w-1/2 py-3 text-center bg-green-500 text-white font-bold disabled:bg-gray-500 rounded-lg"
+        >
+            開始填寫
+        </button>
+        <button
+            id="clearBtn"
+            class="mx-auto m-3 mt-0 inset-0 w-1/2 py-3 text-center bg-blue-500 text-white font-bold disabled:bg-gray-500 rounded-lg"
+        >
+            清除紀錄
+        </button>
+    </div>
+    <script type="text/javascript" src="popup.js"></script> 
+</body>
+</html>
